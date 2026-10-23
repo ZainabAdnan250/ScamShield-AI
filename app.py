@@ -14,7 +14,13 @@ from google import genai
 BASE_DIR = Path(__file__).parent
 load_dotenv(BASE_DIR / ".env")
 
-API_KEY = os.getenv("GEMINI_API_KEY")
+try:
+    API_KEY = st.secrets.get(
+        "GEMINI_API_KEY",
+        os.getenv("GEMINI_API_KEY")
+    )
+except Exception:
+    API_KEY = os.getenv("GEMINI_API_KEY")
 MODEL_NAME = "gemma-4-26b-a4b-it"
 
 st.set_page_config(
