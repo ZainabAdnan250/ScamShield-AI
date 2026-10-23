@@ -36,3 +36,6 @@ ScamShield AI is an AI-powered application designed to help users analyze suspic
 ## License
 
 This project is licensed under the MIT License.
+
+## Live Preview
+https://scamshieid-ai.streamlit.app/
